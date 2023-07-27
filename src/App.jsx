@@ -1,10 +1,10 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import habitacion from './img/habitacion2.jpg'
-import estructura from './img/madera.jpg'
+// import estructura from './img/madera.jpg'
 import madera1 from './img/madera1.jpg'
 import madera2 from './img/madera2.jpg'
-import madera3 from './img/madera3.jpg'
-import madera4 from './img/madera4.jpg'
+// import madera3 from './img/madera3.jpg'
+// import madera4 from './img/madera4.jpg'
 import { Banner } from './components/Banner'
 import { NavBar } from './components/NavBar'
 
