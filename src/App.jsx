@@ -1,12 +1,10 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import habitacion from './img/habitacion2.jpg'
-// import estructura from './img/madera.jpg'
-import madera1 from './img/madera1.jpg'
-import madera2 from './img/madera2.jpg'
-// import madera3 from './img/madera3.jpg'
-// import madera4 from './img/madera4.jpg'
+// import estructura from './img/madera4.jpg'
 import { Banner } from './components/Banner'
 import { NavBar } from './components/NavBar'
+import { SectionGaleria } from './components/SectionGaleria'
+
 
 function App() {
 
@@ -27,35 +25,17 @@ function App() {
           {/* <ParallaxLayer
             offset={1}
             speed={1}
-            sticky={{start: 1, end: 4}}
+            factor={1}
             style={{
               backgroundImage: `url(${estructura})`,
               backgroundSize: 'cover',
             }}
           /> */}
-          <ParallaxLayer
-          offset={1}
-          speed={1}
-          factor={1}
-          style={{
-            backgroundImage: `url(${madera1})`,
-            backgroundSize: 'cover',
-          }}
-          />
-          <ParallaxLayer
-          offset={1.8}
-          speed={1}
-          factor={1}
-          style={{
-            backgroundImage: `url(${madera2})`,
-            backgroundSize: 'cover',
-          }}
-          />
-          <ParallaxLayer offset={0.5} speed={0.1}>
+          <ParallaxLayer offset={0.5} speed={0.05}>
             <Banner />
           </ParallaxLayer>
-          <ParallaxLayer offset={1.2} speed={2}>
-            <h2>World</h2>
+          <ParallaxLayer offset={1.3} speed={0.5}>
+            <SectionGaleria/>
           </ParallaxLayer>
         </Parallax>
       </div>
