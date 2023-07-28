@@ -1,4 +1,4 @@
-/* section img {
+section .galeria {
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
@@ -6,14 +6,18 @@
     transition: .5s ease;
 }
 
-section img:hover{
+section .galeria:hover{
     cursor: crosshair;
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
-} */
+}
 
-article {
+.galeria:hover #textinfo{
+    opacity: 1;
+}
+
+/* article {
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
@@ -41,12 +45,12 @@ article h2{
 }
 
 article:hover{
-    transform: 
+    /* transform: 
     perspective(250px)
     rotateX(10deg)
     translateY(-1%)
-    translateZ(0);
-    width: 300px;
+    translateZ(0); */
+    /* width: 600px
 }
 
 article:hover img{
@@ -56,4 +60,4 @@ article:hover img{
 article:hover h2{
     opacity: 1;
     transform: translateY(10%);
-}
+} */ 

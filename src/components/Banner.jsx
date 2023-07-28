@@ -1,4 +1,3 @@
-// import { TypeAnimation } from "react-type-animation"
 import logo from '../img/LOGO.png'
 
 export const Banner = () => {
@@ -23,7 +22,7 @@ export const Banner = () => {
                             </div>
                         </div>
                         <img
-                            className='w-[600px] h-[300px] animate-jump animate-infinite animate-duration-[5000ms] animate-ease-in mr-10'
+                            className='w-[600px] h-[300px]'
                             alt='logo'
                             src={logo}>
                         </img>               
