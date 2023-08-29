@@ -1,21 +1,20 @@
 import { useState } from 'react'
 import logo from '../img/LOGO.png'
-// import { ButtonNav } from './ButtonNav'
 
 export const NavBar = () => {
 
-    let Links = [
+    const Links = [
         {name:'Home', link:'/'},
         {name:'Services', link:'/'},
         {name:'Why Choose Us?', link:'/'},
         {name:'Login', link:'/login'},
     ]
 
-    let [open, setOpen]=useState(false)
+    const [open, setOpen]=useState(false)
 
     return (
         <>
-            <div className='shadow-md w-full fixed top-0 left-0'>
+            <div className='shadow-md w-full fixed top-0 left-0 z-10'>
                 <div className='md:flex items-center justify-between bg-[#bea347] py-4 md:px-10 px-7'>
                     <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-950'>
                         <span>

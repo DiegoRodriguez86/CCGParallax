@@ -13,13 +13,12 @@ export const LandingPage = () => {
     <>
         <Parallax pages={5}>
           <ParallaxLayer
-          offset={0}
           speed={0}
           >
           <NavBar/>
           </ParallaxLayer>       
           <ParallaxLayer
-            offset={0.1}
+            offset={0.09}
             speed={1}
             factor={0.9}
             style={{
@@ -42,7 +41,7 @@ export const LandingPage = () => {
           <ParallaxLayer offset={3.8}>
             <Brands/>
           </ParallaxLayer>
-          <ParallaxLayer offset={4.55}>
+          <ParallaxLayer offset={4.7}>
             <Footer/>
           </ParallaxLayer>
         </Parallax>

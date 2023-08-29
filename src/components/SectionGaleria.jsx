@@ -69,17 +69,17 @@ export const SectionGaleria = () => {
             </section>
             {isHoveringA && (
                     <article className='m-auto'>
-                        <h2 className='text-7xl font-sans tracking-widest drop-shadow-2xl text-black'>Service 1</h2>
+                        <h2 className='font-bold text-6xl my-6'>Service 1</h2>
                     </article>
                 )}
                 {isHoveringB && (
                     <article className='m-auto'>
-                        <h2 className='text-7xl font-sans tracking-widest drop-shadow-2xl text-black'>Service 2</h2>
+                        <h2 className='font-bold text-6xl my-6'>Service 2</h2>
                     </article>
                 )}
                 {isHoveringC && (
                     <article className='m-auto'>
-                        <h2 className='text-7xl font-sans tracking-widest drop-shadow-2xl text-black'>Service 3</h2>
+                        <h2 className='font-bold text-6xl my-6'>Service 3</h2>
                     </article>
                 )}
         </div>

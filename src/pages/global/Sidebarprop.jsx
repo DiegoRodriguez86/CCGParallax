@@ -12,12 +12,11 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { Box, useTheme, Typography, IconButton } from "@mui/material";
 import { tokens } from "../../theme";
-import { Sidebar, sidebarClasses, Menu, MenuItem } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/LOGO.png"
+import userdef from "../../img/user-default.png"
 
-// eslint-disable-next-line react/prop-types
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -43,33 +42,26 @@ export const Sidebarprop = () => {
   const [selected, setSelected] = useState("Dashboard");
   return (
     <Box
-      // sx={{
-      //   "& .sidebar-inner": {
-      //     background: `${colors.primary[400]} !important`,
-      //   },
-      //   "& .sidebar-icon-wrapper": {
-      //     backgroundColor: "transparent !important",
-      //   },
-      //   "& .sidebar-inner-item": {
-      //     padding: "5px 35px 5px 20px !important",
-      //   },
-      //   "& .sidebar-inner-item:hover": {
-      //     color: "#868dfb !important",
-      //   },
-      //   "& .sidebar-menu-item.active": {
-      //     color: "#6870fa !important",
-      //   },
-      // }}
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "15px 45px 15px 0px !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#BEA347 !important",
+        },
+        "& .pro-menu-item.active": {
+          color: "#BEA347 !important",
+        },
+      }}
     >
-      <Sidebar
-        collapsed={isCollapsed}
-        rootStyles={{
-          [`.${sidebarClasses.container}`]: {
-            backgroundColor: `${colors.primary[400]} !important`,
-          },
-        }}
-      >
-         <Menu iconShape="square">
+      <ProSidebar collapsed={isCollapsed}>
+        <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -103,7 +95,7 @@ export const Sidebarprop = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={logo}
+                  src={userdef}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -114,24 +106,23 @@ export const Sidebarprop = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Diego Rodriguez
+                  ADMIN
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Admin
+                <Typography variant="h5" color={colors.grey[500]}>
+                  CCG Admin
                 </Typography>
               </Box>
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          <Box paddingLeft={isCollapsed ? undefined : "20%"}>
             <Item
               title="Dashboard"
-              to="/"
+              to="./"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -141,7 +132,7 @@ export const Sidebarprop = () => {
             </Typography>
             <Item
               title="Manage Team"
-              to="/team"
+              to="/dashboard/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -161,13 +152,14 @@ export const Sidebarprop = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+            {/* <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Pages
-            </Typography>
+            </Typography> */}
+            {/* 
             <Item
               title="Profile Form"
               to="/form"
@@ -224,10 +216,10 @@ export const Sidebarprop = () => {
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
           </Box>
         </Menu>
-      </Sidebar>
+      </ProSidebar>
     </Box>
-  );
-};
+  )
+}
